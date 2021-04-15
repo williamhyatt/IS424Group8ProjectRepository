@@ -6,9 +6,45 @@
     <link rel="stylesheet" href="w3local2.css">
     <link rel="stylesheet" href="w3local3.css">    
 
+    <head>
+    <style> 
+
+    .fixed_header{
+    width: 1280px;
+    table-layout: fixed;
+    border-collapse: collapse;
+    margin: 0 auto;
+    }
+
+    .fixed_header tbody{
+      display:block;
+      width: 1280px;
+      height: 580px;
+      overflow: auto;
+    }
+
+    .fixed_header thead tr {
+      display: block;
+    }
+
+    .fixed_header thead {
+      background: black;
+      color:#fff;
+    }
+
+    .fixed_header th, .fixed_header td {
+      padding: 5px;
+      text-align: left;
+      width: 423px;
+    }
+
+    </style>
+
+  </head>
+
 <body>
 
-    <div class="w3-bar w3-border">
+     <div class="w3-bar w3-border w3-display-topmidde">
       <img src="NavBarLogo.jpeg" class="w3-rounded-small" style="height:65px">
       <a href="#" class="w3-bar-item w3-button w3-border w3-right w3-black w3-padding-24">LOG OUT</a>
       <a href="#" class="w3-bar-item w3-button w3-border w3-right w3-padding-24">EMPLOYEE RESOURCES</a>
@@ -19,9 +55,7 @@
 
   </textarea><br> 
   
- 
-  <div class="w3-container"> 
-      <table class="w3-table-all">
+      <table class="fixed_header w3-border">
         <thead>
             <tr class="w3-black">
             <th>Product ID</th>
@@ -154,11 +188,15 @@
             <td>Dummy Item Twenty Two</td>
             <td class="w3-right-align">3</td>
           </tr>
-        </div>
         </table>
       </div>
 
 </textarea><br> 
+
+<footer class="w3-container w3-bottom w3-padding w3-center">
+  <img src="PageFooter.png" class="w3-rounded-small">
+</div>
+</footer>
 
 </body>
 
