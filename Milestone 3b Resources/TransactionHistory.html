@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/w3-theme-black.css">
 
-    <head>
+  <head>
     <style> 
 
     .fixed_header{
@@ -38,66 +38,6 @@
       width: 423px;
     }
 
-    .custom-select {
-  position: relative;
-  font-family: Arial;
-}
-
-.custom-select select {
-  display: none; /*hide original SELECT element:*/
-}
-
-.select-selected {
-  background-color: rgb(128, 133, 138);
-}
-
-/*style the arrow inside the select element:*/
-.select-selected:after {
-  position: absolute;
-  content: "";
-  top: 14px;
-  right: 10px;
-  width: 0;
-  height: 0;
-  border: 6px solid transparent;
-  border-color: #fff transparent transparent transparent;
-}
-
-/*point the arrow upwards when the select box is open (active):*/
-.select-selected.select-arrow-active:after {
-  border-color: transparent transparent #fff transparent;
-  top: 7px;
-}
-
-/*style the items (options), including the selected item:*/
-.select-items div,.select-selected {
-  color: #ffffff;
-  padding: 8px 16px;
-  border: 1px solid transparent;
-  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
-  cursor: pointer;
-  user-select: none;
-}
-
-/*style items (options):*/
-.select-items {
-  position: absolute;
-  background-color: rgb(162, 168, 173);
-  top: 100%;
-  left: 0;
-  right: 0;
-  z-index: 99;
-}
-
-/*hide the items when the select box is closed:*/
-.select-hide {
-  display: none;
-}
-
-.select-items div:hover, .same-as-selected {
-  background-color: rgba(0, 0, 0, 0.1);
-}
-
     </style>
 
   </head>
@@ -118,25 +58,22 @@
     
             <div class="w3-display-container w3-black" style="width:1280px;height:81px;margin:0 auto">
                 <div class="w3-container w3-display-left">
-                <div class="custom-select" style="width:205px;margin-left: 125px;">
-                    <select>
-                        <option value="0">Choose Display Type</option>
-                        <option valie="1">Display: All Transactions</option>
-                        <option value="2">Display: Purchases</option>
-                        <option value="3">Display: Sales</option>
-                    </select>
+                  <label class="w3-text" style="margin-left:100px"><b>Choose transaction type:</b></label>
+                  <select class="w3-select w3-border-black w3-dark-grey" name="option" style="width:205px;margin-left:20px;">
+                    <option value="" disabled selected></option>
+                    <option value="1">All transactions</option>
+                    <option value="2">Purchases</option>
+                    <option value="3">Sales</option>
+                  </select>
                 </div>
-                 </div>
                 <div class="w3-container w3-display-right">
-                <div class="custom-select" style="width:205px;margin-right:125px">
-                    <select>
-                        <option value="0">Choose Sort Order</option>
-                        <option value="1">Sort by: New</option>
-                        <option value="2">Sort by: Old</option>
-                    </select>
+                  <label class="w3-text"><b>Sort by:</b></label>
+                  <select class="w3-select w3-border-black w3-dark-grey" name="option" style="width:205px;margin-left:20px;margin-right:150px;">
+                    <option value="" disabled selected></option>
+                    <option value="1">New</option>
+                    <option value="2">Old</option>
+                  </select>
                 </div>
-                </div>
-            </div>
             </div>
             
          <table class="fixed_header w3-border w3-striped">
@@ -190,93 +127,6 @@
       
 
     </textarea><br> 
-    
-
-    <script>
-        var x, i, j, l, ll, selElmnt, a, b, c;
-        /*look for any elements with the class "custom-select":*/
-        x = document.getElementsByClassName("custom-select");
-        l = x.length;
-        for (i = 0; i < l; i++) {
-          selElmnt = x[i].getElementsByTagName("select")[0];
-          ll = selElmnt.length;
-          /*for each element, create a new DIV that will act as the selected item:*/
-          a = document.createElement("DIV");
-          a.setAttribute("class", "select-selected");
-          a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
-          x[i].appendChild(a);
-          /*for each element, create a new DIV that will contain the option list:*/
-          b = document.createElement("DIV");
-          b.setAttribute("class", "select-items select-hide");
-          for (j = 1; j < ll; j++) {
-            /*for each option in the original select element,
-            create a new DIV that will act as an option item:*/
-            c = document.createElement("DIV");
-            c.innerHTML = selElmnt.options[j].innerHTML;
-            c.addEventListener("click", function(e) {
-                /*when an item is clicked, update the original select box,
-                and the selected item:*/
-                var y, i, k, s, h, sl, yl;
-                s = this.parentNode.parentNode.getElementsByTagName("select")[0];
-                sl = s.length;
-                h = this.parentNode.previousSibling;
-                for (i = 0; i < sl; i++) {
-                  if (s.options[i].innerHTML == this.innerHTML) {
-                    s.selectedIndex = i;
-                    h.innerHTML = this.innerHTML;
-                    y = this.parentNode.getElementsByClassName("same-as-selected");
-                    yl = y.length;
-                    for (k = 0; k < yl; k++) {
-                      y[k].removeAttribute("class");
-                    }
-                    this.setAttribute("class", "same-as-selected");
-                    break;
-                  }
-                }
-                h.click();
-            });
-            b.appendChild(c);
-          }
-          x[i].appendChild(b);
-          a.addEventListener("click", function(e) {
-              /*when the select box is clicked, close any other select boxes,
-              and open/close the current select box:*/
-              e.stopPropagation();
-              closeAllSelect(this);
-              this.nextSibling.classList.toggle("select-hide");
-              this.classList.toggle("select-arrow-active");
-            });
-        }
-        function closeAllSelect(elmnt) {
-          /*a function that will close all select boxes in the document,
-          except the current select box:*/
-          var x, y, i, xl, yl, arrNo = [];
-          x = document.getElementsByClassName("select-items");
-          y = document.getElementsByClassName("select-selected");
-          xl = x.length;
-          yl = y.length;
-          for (i = 0; i < yl; i++) {
-            if (elmnt == y[i]) {
-              arrNo.push(i)
-            } else {
-              y[i].classList.remove("select-arrow-active");
-            }
-          }
-          for (i = 0; i < xl; i++) {
-            if (arrNo.indexOf(i)) {
-              x[i].classList.add("select-hide");
-            }
-          }
-        }
-        /*if the user clicks anywhere outside the select box,
-        then close all select boxes:*/
-        document.addEventListener("click", closeAllSelect);
-        </script>
-
-
-
-
-
 
 <footer class="w3-container w3-bottom w3-padding w3-center">
     <img src="images/PageFooter.png" class="w3-rounded-small">

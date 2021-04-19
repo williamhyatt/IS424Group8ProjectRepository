@@ -59,10 +59,10 @@
               <p>
               <div class="w3-display-container">
               <div class="w3-right-align">
-              <button class="w3-btn w3-dark-grey" itype="submit" id="logTransaction" name="logTransaction">Log Purchase</button>
+              <button class="w3-btn w3-dark-grey" type="submit" id="logTransaction" name="logTransaction">Log Purchase</button>
               </div>
               <div class="w3-display-left">
-              <button class="w3-btn w3-dark-grey" type="reset" id="logTransaction" name="logTransaction">Clear</button>
+              <button class="w3-btn w3-dark-grey" type="reset">Clear</button>
               </div>
               </div>
               </p>
@@ -77,9 +77,14 @@
               <h2>Enter Sales Information</h2>
             </div>
             <form class="w3-container" action="/action_page.php">
-              <p>      
-              <label class="w3-text"><b>Enter item name:</b></label>
-              <input class="w3-input w3-border" name="first" type="text" placeholder="Ex: Moncler Suyen Hooded Down Parka">
+              <p>   
+                  <label class="w3-text"><b>Select item name:</b></label>
+                  <select class="w3-select w3-border" name="option" style="width:557px">
+                    <option value="" disabled selected></option>
+                    <option value="1">Option 1</option>
+                    <option value="2">Option 2</option>
+                    <option value="3">Option 3</option>
+                  </select>
               </p>
               
               <p style="margin-top:20px;margin-bottom:23px;">
@@ -103,7 +108,7 @@
               <button class="w3-btn w3-dark-grey" type="submit" id="logTransaction" name="logTransaction">Log Sale</button>
               </div>
               <div class="w3-display-left">
-              <button class="w3-btn w3-dark-grey" type ="reset" id="clearInfo" name="clearInfo">Clear</button>
+              <button class="w3-btn w3-dark-grey" type="reset">Clear</button>
               </div>
               </div>
               </p>
