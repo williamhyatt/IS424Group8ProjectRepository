@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/w3.css">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/w3-theme-black.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/w3.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/w3-theme-black.css">
 
-  <head>
-    <style> 
+
+  <!--CSS for table with FIXED header and SCROLLING body STARTS-->
+  <style> 
 
     .fixed_header{
     width: 1280px;
@@ -38,100 +39,127 @@
       width: 423px;
     }
 
-    </style>
-
-  </head>
+  </style>
+  <!--CSS for table ENDS-->
 
 <body>
 
-    <div class="w3-bar w3-border">
-        <a href="homepage.html" class ="w3-bar-item w3-left" style="padding:0%;">
-        <img src="images/NavBarLogo.jpeg" class="w3-rounded-small" style="height:65px;"></a>
-        <a href="index.html" class="w3-bar-item w3-button w3-border w3-right w3-black w3-padding-24">LOG OUT</a>
-        <a href="employeeresources.html" class="w3-bar-item w3-button w3-border w3-right w3-padding-24">EMPLOYEE RESOURCES</a>
-        <a href="transactionhistory.html" class="w3-bar-item w3-button w3-border w3-right w3-padding-24 w3-pale-red">TRANSACTION HISTORY</a>
-        <a href="inventory.html" class="w3-bar-item w3-button w3-border w3-right w3-padding-24">VIEW INVENTORY</a>
-        <a href="transaction.html" class="w3-bar-item w3-button w3-border w3-right w3-padding-24">NEW TRANSACTION</a>
-      </div>
+<!--Navigation bar STARTS
+   -Button for current screen gets higlighted pale red
+   -Clicking logo at left returns user to initial navigation Homepage screen-->  
+<div class="w3-bar w3-border">
+
+  <a href="homepage.html" class ="w3-bar-item w3-left" style="padding:0%;">
+  <img src="images/NavBarLogo.jpeg" class="w3-rounded-small" style="height:65px;"></a>
+
+  <a href="index.html" class="w3-bar-item w3-button w3-border w3-right w3-black w3-padding-24">LOG OUT</a>
   
-    </textarea><br> 
+  <a href="employeeresources.html" class="w3-bar-item w3-button w3-border w3-right w3-padding-24">EMPLOYEE RESOURCES</a>
+  
+  <a href="transactionhistory.html" class="w3-bar-item w3-button w3-border w3-right w3-padding-24 w3-pale-red">TRANSACTION HISTORY</a> <!--Current screen-->
+  
+  <a href="inventory.html" class="w3-bar-item w3-button w3-border w3-right w3-padding-24">VIEW INVENTORY</a>
+  
+  <a href="transaction.html" class="w3-bar-item w3-button w3-border w3-right w3-padding-24">NEW TRANSACTION</a>
+  
+</div>
+<!--Navigation bar ENDS-->
+
+<br> <!--Spacing-->
+
+<!--Container for sorting/filter dropdowns STARTS-->
+<div class="w3-display-container w3-black" style="width:1280px;height:81px;margin:0 auto">
     
-            <div class="w3-display-container w3-black" style="width:1280px;height:81px;margin:0 auto">
-                <div class="w3-container w3-display-left">
-                  <label class="w3-text" style="margin-left:100px"><b>Choose transaction type:</b></label>
-                  <select class="w3-select w3-border-black w3-dark-grey" name="option" style="width:205px;margin-left:20px;">
-                    <option value="" disabled selected></option>
-                    <option value="1">All transactions</option>
-                    <option value="2">Purchases</option>
-                    <option value="3">Sales</option>
-                  </select>
-                </div>
-                <div class="w3-container w3-display-right">
-                  <label class="w3-text"><b>Sort by:</b></label>
-                  <select class="w3-select w3-border-black w3-dark-grey" name="option" style="width:205px;margin-left:20px;margin-right:150px;">
-                    <option value="" disabled selected></option>
-                    <option value="1">New</option>
-                    <option value="2">Old</option>
-                  </select>
-                </div>
-            </div>
-            
-         <table class="fixed_header w3-border w3-striped">
-            <thead>
-                <tr class="w3-black" style="font-size: x-small;">
-                <th>Transaction Date</th>
-                <th>Transaction ID</th>
-                <th>Purchase/Sale ID</th>
-                <th>Product ID</th>
-                <th>Product Name</th>
-                <th class="w3-right-align">Quantity Purchased/Sold</th>
-                <th class="w3-right-align">Transaction Price</th>
-                <th class="w3-right-align">Transaction Value</th>
-                </tr>
-            </thead>
+  <div class="w3-container w3-display-left"> <!--Transaction display dropdown-->
+      <label class="w3-text" style="margin-left:100px"><b>Choose transaction type:</b></label>
 
-            <tr class="w3-hover-pale-red">
-                <td>01/21/2021</td>
-                <td>123</td>
-                <td>1445228</td>
-                <td>1001</td>
-                <td>Dummy Item One</td>
-                <td class="w3-right-align">3</td>
-                <td class="w3-right-align">$5.87</td>
-                <td class="w3-right-align">$17.61</td>
-              </tr>
+      <select class="w3-select w3-border-black w3-dark-grey" name="option" style="width:205px;margin-left:20px;">
+        <option value="" disabled selected></option>
+        <option value="1">All transactions</option>
+        <option value="2">Purchases</option>
+        <option value="3">Sales</option>
+      </select>
 
-              <tr class="w3-hover-pale-red">
-                <td>09/02/2020</td>
-                <td>487</td>
-                <td>2875298</td>
-                <td>1002</td>
-                <td>Dummy Item Tw0</td>
-                <td class="w3-right-align">1</td>
-                <td class="w3-right-align">$100.02</td>
-                <td class="w3-right-align">$100.02</td>
-              </tr>
-              
-              <tr class="w3-hover-pale-red">
-                <td>07/18/2020</td>
-                <td>987</td>
-                <td>1325861</td>
-                <td>1003</td>
-                <td>Dummy Item Three</td>
-                <td class="w3-right-align">8</td>
-                <td class="w3-right-align">$3.80</td>
-                <td class="w3-right-align">$30.40</td>
-              </tr>             
+  </div>
 
-        </table>
-      
+  <div class="w3-container w3-display-right"> <!--Sorting date dropdown-->
+      <label class="w3-text"><b>Sort by:</b></label>
 
-    </textarea><br> 
+      <select class="w3-select w3-border-black w3-dark-grey" name="option" style="width:205px;margin-left:20px;margin-right:150px;">
+        <option value="" disabled selected></option>
+        <option value="1">New</option>
+        <option value="2">Old</option>
+      </select>
 
+  </div>
+
+</div>
+<!--Container for sorting-filter dropdowns ENDS-->
+
+<!--Display transaction history table STARTS-->
+<table class="fixed_header w3-border w3-striped"> <!--Striped makes rows alternate colors for enhanced readability-->
+
+  <!--Table header STARTS-->
+  <thead class="w3-black" style="font-size: x-small;"> 
+    <th>Transaction Date</th>
+    <th>Transaction ID</th>
+    <th>Purchase/Sale ID</th>
+    <th>Product ID</th>
+    <th>Product Name</th>
+    <th class="w3-right-align">Quantity Purchased/Sold</th> <!--Aligns header cell ONLY ... does not affect cells in table column-->
+    <th class="w3-right-align">Transaction Price</th>
+    <th class="w3-right-align">Transaction Value</th>
+  </thead>
+  <!--Table header ENDS-->
+
+  <!--'tr' encases properties for new row in table ... HTML requires manual entry of each row value
+     -Code TBU to query database and display DB information instead-->
+  <tr class="w3-hover-pale-red"> <!--Pale red highlight when row is moused over-->
+      <td>01/21/2021</td>
+      <td>123</td>
+      <td>1445228</td>
+      <td>1001</td>
+      <td>Dummy Item One</td>
+      <td class="w3-right-align">3</td>
+      <td class="w3-right-align">$5.87</td>
+      <td class="w3-right-align">$17.61</td>
+    </tr>
+  <!--End of properties for ONE row-->
+
+  <tr class="w3-hover-pale-red">
+    <td>09/02/2020</td>
+    <td>487</td>
+    <td>2875298</td>
+    <td>1002</td>
+    <td>Dummy Item Tw0</td>
+    <td class="w3-right-align">1</td>
+    <td class="w3-right-align">$100.02</td>
+    <td class="w3-right-align">$100.02</td>
+  </tr>
+  
+  <tr class="w3-hover-pale-red">
+    <td>07/18/2020</td>
+    <td>987</td>
+    <td>1325861</td>
+    <td>1003</td>
+    <td>Dummy Item Three</td>
+    <td class="w3-right-align">8</td>
+    <td class="w3-right-align">$3.80</td>
+    <td class="w3-right-align">$30.40</td>
+  </tr>             
+
+</table>
+<!--Display transaction history table ENDS-->
+  
+
+<br> <!--Spacing-->
+
+<!--Page footer STARTS-->
 <footer class="w3-container w3-bottom w3-padding w3-center">
     <img src="images/PageFooter.png" class="w3-rounded-small">
     </div>
 </footer>
+<!--Page footer ENDS-->
     
 </body>
     
