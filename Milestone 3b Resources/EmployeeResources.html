@@ -1,23 +1,22 @@
 <!DOCTYPE html>
 <html>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="css/w3.css">
-  <link rel="stylesheet" href="css/font-awesome.min.css">
-  <link rel="stylesheet" href="css/w3-theme-black.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/w3.css">
+<link rel="stylesheet" href="css/font-awesome.min.css">
+<link rel="stylesheet" href="css/w3-theme-black.css">
 
 <!--CSS for table with FIXED header and SCROLLING body STARTS-->
-<style> 
-
-  .fixed_header{
-  width: 1280px;
-  table-layout: fixed;
-  border-collapse: collapse;
-  margin: 0 auto;
+<style>
+  .fixed_header {
+    width: 1280px;
+    table-layout: fixed;
+    border-collapse: collapse;
+    margin: 0 auto;
   }
 
-  .fixed_header tbody{
-    display:block;
+  .fixed_header tbody {
+    display: block;
     width: 1280px;
     overflow: auto;
   }
@@ -28,109 +27,124 @@
 
   .fixed_header thead {
     background: black;
-    color:#fff;
+    color: #fff;
   }
 
-  .fixed_header th, .fixed_header td {
+  .fixed_header th,
+  .fixed_header td {
     padding: 5px;
     text-align: left;
     width: 427px;
   }
-
 </style>
 <!--CSS for table ENDS-->
 
 <body>
 
-<!--Navigation bar STARTS
+  <!--Navigation bar STARTS
    -Button for current screen gets higlighted pale red
-   -Clicking logo at left returns user to initial navigation Homepage screen-->    
-<div class="w3-bar w3-border">
+   -Clicking logo at left returns user to initial navigation Homepage screen-->
+  <div class="w3-bar w3-border">
 
-  <a href="homepage.html" class ="w3-bar-item w3-left" style="padding:0%;">
-  <img src="images/NavBarLogo.jpeg" class="w3-rounded-small" style="height:65px;"></a>
+    <a href="homepage.html" class="w3-bar-item w3-left" style="padding:0%;">
+      <img src="images/NavBarLogo.jpeg" class="w3-rounded-small" style="height:65px;"></a>
 
-  <a href="index.html" class="w3-bar-item w3-button w3-border w3-right w3-black w3-padding-24">LOG OUT</a>
+    <a href="index.html" class="w3-bar-item w3-button w3-border w3-right w3-black w3-padding-24">LOG OUT</a>
 
-  <a href="employeeresources.html" class="w3-bar-item w3-button w3-border w3-right w3-padding-24 w3-pale-red">EMPLOYEE RESOURCES</a> <!--Current screen-->
+    <a href="employeeresources.html" class="w3-bar-item w3-button w3-border w3-right w3-padding-24 w3-pale-red">EMPLOYEE
+      RESOURCES</a>
+    <!--Current screen-->
 
-  <a href="transactionhistory.html" class="w3-bar-item w3-button w3-border w3-right w3-padding-24">TRANSACTION HISTORY</a>
+    <a href="transactionhistory.html" class="w3-bar-item w3-button w3-border w3-right w3-padding-24">TRANSACTION
+      HISTORY</a>
 
-  <a href="inventory.html" class="w3-bar-item w3-button w3-border w3-right w3-padding-24">VIEW INVENTORY</a>
+    <a href="inventory.html" class="w3-bar-item w3-button w3-border w3-right w3-padding-24">VIEW INVENTORY</a>
 
-  <a href="transaction.html" class="w3-bar-item w3-button w3-border w3-right w3-padding-24">NEW TRANSACTION</a>
+    <a href="transaction.html" class="w3-bar-item w3-button w3-border w3-right w3-padding-24">NEW TRANSACTION</a>
 
-</div>
-<!--Navigation bar ENDS-->
+  </div>
+  <!--Navigation bar ENDS-->
 
-<br> <!--Spacing-->
+  <br>
+  <!--Spacing-->
 
-<!--Table for item glossary STARTS
+  <!--Table for item glossary STARTS
    -Item glossary will allow employees to match product ID's and product name's in system with what
     physical items they see in store by using their own description of the product-->
-<table class="fixed_header w3-border w3-striped" style="height:500px;"> <!--Striped makes rows alternate colorf or enhanced readability-->
-    
+  <table class="fixed_header w3-border w3-striped" style="height:500px;">
+    <!--Striped makes rows alternate colorf or enhanced readability-->
+
     <!--Table header STARTS-->
     <thead class="w3-black">
-        <th>Product ID</th>
-        <th>Product Name</th>
-        <th class="w3-right-align">Product Description</th> <!--Aligns header cell ONLY ... does not affect cells in table column-->
+      <th>Product ID</th>
+      <th>Product Name</th>
+      <th class="w3-right-align">Product Description</th>
+      <!--Aligns header cell ONLY ... does not affect cells in table column-->
     </thead>
     <!--Table header ENDS-->
 
     <!--'tr' encases properties for new row in table ... HTML requires manual entry of each row value
        -Code TBU to query database and display DB information instead-->
-    <tr class="w3-hover-pale-red"> <!--Pale red highlight when row is moused over-->
+    <tr class="w3-hover-pale-red">
+      <!--Pale red highlight when row is moused over-->
       <td>1001</td>
       <td>Dummy Item One</td>
-      <td class="w3-right-align">This item is extremeley nice and useful for the cold months. It is an amazing addition to any wardrobe. We reccomend pairing with a scarf.</td>
+      <td class="w3-right-align">This item is extremeley nice and useful for the cold months. It is an amazing addition
+        to any wardrobe. We reccomend pairing with a scarf.</td>
     </tr>
     <!--End of properties for ONE row-->
 
     <tr class="w3-hover-pale-red">
       <td>1002</td>
       <td>Dummy Item Two</td>
-      <td class="w3-right-align">Red sweater with green stripes and sequin details. U-neck shape with an extremeley flared bottom.</td>
+      <td class="w3-right-align">Red sweater with green stripes and sequin details. U-neck shape with an extremeley
+        flared bottom.</td>
     </tr>
 
     <tr class="w3-hover-pale-red">
       <td>1003</td>
       <td>Dummy Item Three</td>
-      <td class="w3-right-align">Black faux leather belt with large buckle at the front. White detailing around belt holes.</td>
+      <td class="w3-right-align">Black faux leather belt with large buckle at the front. White detailing around belt
+        holes.</td>
     </tr>
 
-</table>
-<!--Table for item glossary ENDS-->
+  </table>
+  <!--Table for item glossary ENDS-->
 
-<!--Table for Profit & Loss calculations STARTs-->
-<table class="fixed_header w3-card-4 w3-centered" style="height:92px;">
-    
+  <!--Table for Profit & Loss calculations STARTs-->
+  <table class="fixed_header w3-card-4 w3-centered" style="height:92px;">
+
     <thead>
       <tr class="w3-dark-gray">
-      <th>Revenue</th> <!--Revenue will sum total of: For every product ID with a sale ID, multiply the total quantity sold by the average retail price for that product-->
-      <th>Cost of Goods Sold</th> <!--COGS will sum total of: For every product ID with a sale ID, multiply the total quantity sold by the average supplier price for that product-->
-      <th>Gross Profit</th> <!--Gross Profit will subtract total COGS from total Revenue-->
+        <th>Revenue</th>
+        <!--Revenue will sum total of: For every product ID with a sale ID, multiply the total quantity sold by the average retail price for that product-->
+        <th>Cost of Goods Sold</th>
+        <!--COGS will sum total of: For every product ID with a sale ID, multiply the total quantity sold by the average supplier price for that product-->
+        <th>Gross Profit</th>
+        <!--Gross Profit will subtract total COGS from total Revenue-->
       </tr>
     </thead>
 
     <!--'tr' encases properties for new row in table ... HTML requires manual entry of each row value
        -Code TBU to query database and display DB information instead-->
-    <tr class="w3-hover-pale-green w3-light-gray" style="font-size:large;height:60px;"> <!--Pale green highlight when row is moused over-->
+    <tr class="w3-hover-pale-green w3-light-gray" style="font-size:large;height:60px;">
+      <!--Pale green highlight when row is moused over-->
       <td>$1000</td>
       <td>$300</td>
       <td>$700</td>
     </tr>
 
-</table>
-<!--Table for Profit & Loss calculations ENDS-->
+  </table>
+  <!--Table for Profit & Loss calculations ENDS-->
 
-<br> <!--Spacing-->
+  <br>
+  <!--Spacing-->
 
-<!--Page footer STARTS-->
-<footer class="w3-container w3-bottom w3-padding w3-center">
-  <img src="images/PageFooter.png" class="w3-rounded-small">
-</footer>
-<!--Page footer ENDS-->
+  <!--Page footer STARTS-->
+  <footer class="w3-container w3-bottom w3-padding w3-center">
+    <img src="images/PageFooter.png" class="w3-rounded-small">
+  </footer>
+  <!--Page footer ENDS-->
 
 </body>
 
