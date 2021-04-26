@@ -10,17 +10,17 @@
 <!--CSS for table with FIXED header and SCROLLING body STARTS-->
 <style>
   .fixed_header {
-    width: 1280px;
-    height: 533px;
+    width: 90%;
     table-layout: fixed;
     border-collapse: collapse;
-    margin: 0 auto;
+    height:100%
   }
 
   .fixed_header tbody {
     display: block;
-    width: 1280px;
     overflow: auto;
+    height:90%;
+    
   }
 
   .fixed_header thead tr {
@@ -34,10 +34,11 @@
 
   .fixed_header th,
   .fixed_header td {
-    padding: 5px;
+    padding: 0.5%;
     text-align: left;
-    width: 423px;
+    width:9%;
   }
+
 </style>
 <!--CSS for table ENDS-->
 
@@ -48,7 +49,7 @@
    -Clicking logo at left returns user to initial navigation Homepage screen-->
    <div class="w3-bar w3-border-bottom" style="width:100%">
 
-    <a href="homepage.html" class="w3-bar-item w3-left" style="width:12.8%;">
+    <a href="homepage.html" class="w3-left" style="width:12.25%;">
     <img src="images/NEWnavbarlogo.png" style="width:100%;"></a>
 
     <a href="index.html" class="w3-bar-item w3-button w3-border-left w3-right w3-black w3-padding-24">LOG<br>OUT</a>
@@ -64,63 +65,63 @@
   </div>
   <!--Navigation bar ENDS-->
 
-  <br>
-  <!--Spacing-->
-
-  <!--Container for sorting/filter dropdowns STARTS-->
-  <div class="w3-display-container w3-black" style="width:1280px;height:81px;margin:0 auto">
-
-    <div class="w3-container w3-display-left">
-      <!--Transaction display dropdown-->
-      <label class="w3-text" style="margin-left:100px"><b>Choose transaction type:</b></label>
-
-      <select class="w3-select w3-border-black w3-dark-grey" name="option" style="width:205px;margin-left:20px;">
-        <option value="" disabled selected></option>
-        <option value="1">All transactions</option>
-        <option value="2">Purchases</option>
-        <option value="3">Sales</option>
-      </select>
-
-    </div>
-
-    <div class="w3-container w3-display-right">
-      <!--Sorting date dropdown-->
-      <label class="w3-text"><b>Sort by:</b></label>
-
-      <select class="w3-select w3-border-black w3-dark-grey" name="option"
-        style="width:205px;margin-left:20px;margin-right:150px;">
-        <option value="" disabled selected></option>
-        <option value="1">New</option>
-        <option value="2">Old</option>
-      </select>
-
-    </div>
-
-  </div>
-  <!--Container for sorting-filter dropdowns ENDS-->
-
   <!--Display transaction history table STARTS-->
-  <table class="fixed_header w3-border w3-striped">
-    <!--Striped makes rows alternate colors for enhanced readability-->
+  <div class="w3-display-middle" style="width:90%;height:70%;">
 
+    <!--Container for sorting/filter dropdowns STARTS-->
+    <div class="w3-display-container w3-black w3-border" style="width:100%;height:13%;">
+      
+      <!--Transaction display dropdown-->
+      <div class="w3-half" style="margin-block-start:1.75%;">
+        <label class="w3-text" style="margin-left:15%;font-size:larmediumge;"><b>Choose transaction type:</b></label>
+
+        <select class="w3-select w3-border-black w3-dark-grey" name="option" style="width:25%;margin-left:1.5%;">
+          <option value="" disabled selected></option>
+          <option value="1">All transactions</option>
+          <option value="2">Purchases</option>
+          <option value="3">Sales</option>
+        </select>
+
+      </div>
+
+  
+      <!--Sorting date dropdown-->
+      <div class="w3-half" style="margin-block-start: 1.75%;">
+
+        <label class="w3-text" style="margin-left:40%;font-size:medium;"><b>Sort by:</b></label>
+
+        <select class="w3-select w3-border-black w3-dark-grey" name="option" style="width:25%;margin-left:1.5%;">
+          <option value="" disabled selected></option>
+          <option value="1">New</option>
+          <option value="2">Old</option>
+        </select>
+
+      </div>
+
+    </div>
+    <!--Container for sorting-filter dropdowns ENDS-->
+    
+    <table class="fixed_header w3-border w3-striped" style="width:100%;height:95%;"><!--Striped makes rows alternate colors for enhanced readability-->
     <!--Table header STARTS-->
-    <thead class="w3-black" style="font-size: x-small;">
+    <thead style="width:100%;">
+
+    <tr style="font-size: small;">
       <th>Transaction Date</th>
       <th>Transaction ID</th>
       <th>Purchase/Sale ID</th>
       <th>Product ID</th>
       <th>Product Name</th>
-      <th class="w3-right-align">Quantity Purchased/Sold</th>
-      <!--Aligns header cell ONLY ... does not affect cells in table column-->
+      <th class="w3-right-align">Quantity Purchased/Sold</th><!--Aligns header cell ONLY ... does not affect cells in table column-->
       <th class="w3-right-align">Transaction Price</th>
       <th class="w3-right-align">Transaction Value</th>
+    </tr>
     </thead>
     <!--Table header ENDS-->
 
+    <tbody style="width:100%;">
     <!--'tr' encases properties for new row in table ... HTML requires manual entry of each row value
      -Code TBU to query database and display DB information instead-->
-    <tr class="w3-hover-pale-red">
-      <!--Pale red highlight when row is moused over-->
+    <tr class="w3-hover-pale-red"><!--Pale red highlight when row is moused over-->
       <td>01/21/2021</td>
       <td>123</td>
       <td>1445228</td>
@@ -153,13 +154,11 @@
       <td class="w3-right-align">$3.80</td>
       <td class="w3-right-align">$30.40</td>
     </tr>
-
+    </tbody>
   </table>
+  </div>
   <!--Display transaction history table ENDS-->
 
-
-  <br>
-  <!--Spacing-->
 
   <!--Page footer STARTS-->
   <img class="w3-display-bottommiddle" src="images/PageFooter.png" style="width:98%;margin-bottom:0.5%">
