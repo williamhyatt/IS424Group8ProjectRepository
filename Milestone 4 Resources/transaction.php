@@ -64,6 +64,11 @@
         <!--Action denotes URL or file to send form information to-->
 
         <p style="height:10%;">
+          <label class="w3-text-black"><b>Confirm employee ID:</b></label>
+          <input class="w3-input w3-border" name="" type="number" placeholder="Ex: 123">
+        </p>
+
+        <p style="height:10%;">
           <label class="w3-text"><b>Enter item name:</b></label>
           <input class="w3-input w3-border" name="first" type="text" placeholder="Ex: Moncler Suyen Hooded Down Parka">
         </p>
@@ -100,8 +105,8 @@
           <button class="w3-left w3-btn w3-dark-grey w3-xlarge" type="reset">Clear</button>
 
           <!--Sends information to file listed in 'action' at form start-->
-          <button class="w3-right w3-btn w3-dark-grey w3-xlarge" type="submit" id="logTransaction"
-            name="logTransaction">Log Purchase</button>
+          <input class="w3-right w3-btn w3-dark-grey w3-xlarge" type="submit" id="logTransaction"
+            name="logTransaction" value="Log Purchase">
         </footer>
         <!--Clear and Log Purchase buttons ENDS-->
 
@@ -119,6 +124,11 @@
 
       <form class="w3-container formposition" style="width:100%;height:90%" action="/action_page.php">
         <!--Action denotes URL or file to send form information to-->
+
+        <p style="height:10%;">
+          <label class="w3-text-black"><b>Confirm employee ID:</b></label>
+          <input class="w3-input w3-border" name="" type="number" placeholder="Ex: 123">
+        </p>
 
         <p style="height:10%;">
           <label class="w3-text"><b>Select item name:</b></label><br>
@@ -158,17 +168,14 @@
           <button class="w3-left w3-btn w3-dark-grey w3-xlarge" type="reset">Clear</button>
 
           <!--Sends information to file listed in 'action' at form start-->
-          <button class="w3-right w3-btn w3-dark-grey w3-xlarge" type="submit" id="logTransaction"
-            name="logTransaction">Log Sale</button>
+          <input class="w3-right w3-btn w3-dark-grey w3-xlarge" type="submit" id="logTransaction"
+            name="logTransaction" value="Log Sale">
 
         </footer>
         <!--Clear and Log Sale buttons ENDS-->
 
       </form>
     </div>
-    <!--Enter Sales Information form ENDS-->
-
-  </div>
   <!--Container for transaction information forms ENDS-->
 
   <!--Page footer STARTS-->
