@@ -1,4 +1,42 @@
 <!DOCTYPE html>
+<?php
+//db login info
+$servername = 'localhost';
+$username = 'id16456968_group8';
+$password = 'Nr3hPeniS7\^@k2a$';
+$dbname = 'id16456968_is424_group8_db';
+$conn = new mysqli($servername, $username, $password, $dbname);
+//testing db login
+if (!$conn) {
+	die("failed to connect to db");
+}
+class Employee {
+		private $employeeName;
+		private $employeeID;
+		private $jobCode;
+		
+		function setEmployeeName($name) {
+			$this->$employeeName = $name;
+		}
+		function setEmployeeID($id) {
+			$this->$employeeID = $id;
+		}
+		function setJobCode($code) {
+			$this->$jobCode = $code;
+		}
+		function getEmployeeName() {
+			return $this->$employeeName;
+		}
+		function getEmployeeID() { 
+			return $this->$employeeID;
+		}
+		function getJobCode() {
+			return $this->$jobCode;
+		}
+}
+
+?>
+
 <html>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -47,22 +85,22 @@
     -Clicking logo at left returns user to initial navigation Homepage screen-->
   <div class="w3-bar w3-border-bottom" style="width:100%">
 
-    <a href="homepage.php" class="w3-left" style="width:12.25%;">
+    <a href="homepage.html" class="w3-left" style="width:12.25%;">
       <img src="images/NEWnavbarlogo.png" style="width:100%;"></a>
 
-    <a href="index.php" class="w3-bar-item w3-button w3-border-left w3-right w3-black w3-padding-24">LOG<br>OUT</a>
+    <a href="index.html" class="w3-bar-item w3-button w3-border-left w3-right w3-black w3-padding-24">LOG<br>OUT</a>
 
-    <a href="employeeresources.php"
+    <a href="employeeresources.html"
       class="w3-bar-item w3-border-left w3-button w3-right w3-padding-24">EMPLOYEE<br>RESOURCES</a>
 
-    <a href="transactionhistory.php"
+    <a href="transactionhistory.html"
       class="w3-bar-item w3-border-left w3-button w3-right w3-padding-24">TRANSACTION<br>HISTORY</a>
 
-    <a href="inventory.php"
+    <a href="inventory.html"
       class="w3-bar-item w3-button w3-border-left w3-right w3-padding-24 w3-pale-red">VIEW<br>INVENTORY</a>
     <!--Current screen-->
 
-    <a href="transaction.php"
+    <a href="transaction.html"
       class="w3-bar-item w3-button w3-border-left w3-right w3-padding-24">NEW<br>TRANSACTION</a>
 
   </div>
