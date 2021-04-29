@@ -76,15 +76,21 @@
 
       <!--Transaction display dropdown-->
       <div class="w3-half" style="margin-block-start:1.75%;">
-        <label class="w3-text" style="margin-left:15%;font-size:larmediumge;"><b>Choose transaction type:</b></label>
-
+        
+        <label class="w3-text" style="margin-left:15%;font-size:medium;"><b>Choose transaction type:</b></label>
+       
         <select class="w3-select w3-border-black w3-dark-grey" name="option" style="width:25%;margin-left:1.5%;">
-          <option value="" disabled selected></option>
-          <option value="1">All transactions</option>
-          <option value="2">Purchases</option>
-          <option value="3">Sales</option>
-        </select>
+          
+          <form class="w3-container" style="width:50%;" action="transactionhistory.php" method="POST">
+          
+            <option value="1">All transactions</option>
+            <option value="2">Purchases</option>
+            <option value="3">Sales</option>
+        
+          </form>
 
+        </select>
+      
       </div>
 
 
@@ -92,13 +98,12 @@
       <div class="w3-half" style="margin-block-start: 1.75%;">
 
         <label class="w3-text" style="margin-left:40%;font-size:medium;"><b>Sort by:</b></label>
-
+        
         <select class="w3-select w3-border-black w3-dark-grey" name="option" style="width:25%;margin-left:1.5%;">
-          <option value="" disabled selected></option>
           <option value="1">New</option>
           <option value="2">Old</option>
         </select>
-
+     
       </div>
 
     </div>
