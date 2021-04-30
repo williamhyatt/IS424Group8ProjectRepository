@@ -70,15 +70,14 @@
 
     <!--Container for sorting/filter dropdowns STARTS-->
     <div class="w3-display-container w3-black w3-border" style="width:100%;height:13%;">
-    <h1 class="w3-display-topmiddle w3-border" style="padding-left:1%;padding-right:1%;;margin-block-start: 1%;">Purchases History</h1>
+    <h1 class="w3-display-topmiddle w3-border" style="padding-left:1%;padding-right:1%;;margin-block-start: 1%;">Purchasing History</h1>
         
         <!--Sorting date selection-->
         <form class="w3-half" style="margin-block-start: 1.75%;" action="purchasehistory.php" type="submit" method="POST">
 
-            <label class="w3-text" style="font-size:medium;margin-left:15%"><b>Sort by:</b></label>
+            <label class="w3-text" style="font-size:medium;margin-left:10%"><b>Sort by:</b></label>
         
-            <input class="w3-radio" style="margin-left:1.5%;" type="radio" name="order_by" value="DESC" class="w3-check"><label style="margin-left:1%;">New</label> 
-            <input class="w3-radio" style="margin-left:2.5%;" type="radio" name="order_by" value="ASC" class="w3-check"><label style="margin-left:1%;">Old</label> 
+            <input class="w3-check" style="margin-left:1.5%;" type="checkbox" name="order_by" value="ASC"><label style="margin-left:1%;">Old</label> 
             
 
         </form>
@@ -86,7 +85,7 @@
         <!--Switch display-->
         <form class="w3-half w3-center" style="margin-block-start:1.75%;" action="salehistory.php" type="submit">
            
-            <label class="w3-text" style="margin-left:35%;font-size:medium;"><b>Switch to Sale View: </b></label>
+            <label class="w3-text" style="margin-left:45%;font-size:medium;"><b>Switch to Sale View: </b></label>
             <input class="w3-button w3-dark-grey" type="submit" style="margin-left:1.5%;margin-block-end:0.5%;" value="GO!">
             
         </form>
