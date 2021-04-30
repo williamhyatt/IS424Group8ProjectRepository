@@ -36,7 +36,7 @@
   .fixed_header td {
     padding: 0.5%;
     text-align: left;
-    width: 9%;
+    width: 5%;
   }
 </style>
 <!--CSS for table ENDS-->
@@ -72,22 +72,18 @@
   <div class="w3-display-middle" style="width:90%;height:70%;">
 
     <!--Container for sorting/filter dropdowns STARTS-->
-    <div class="w3-display-container w3-black w3-border" style="width:100%;height:13%;">
+    <form class="w3-display-container w3-black w3-border" style="width:100%;height:13%;" action="transactionhistory.php" method="POST">
 
       <!--Transaction display dropdown-->
       <div class="w3-half" style="margin-block-start:1.75%;">
         
         <label class="w3-text" style="margin-left:15%;font-size:medium;"><b>Choose transaction type:</b></label>
        
-        <select class="w3-select w3-border-black w3-dark-grey" name="option" style="width:25%;margin-left:1.5%;">
-          
-          <form class="w3-container" style="width:50%;" action="transactionhistory.php" method="POST">
+        <select class="w3-select w3-border-black w3-dark-grey" name="transaction_type" style="width:25%;margin-left:1.5%;">
           
             <option value="1">All transactions</option>
-            <option value="2">Purchases</option>
-            <option value="3">Sales</option>
-        
-          </form>
+            <option value="PURCHASES">Purchases</option>
+            <option value="SALES">Sales</option>
 
         </select>
       
@@ -97,16 +93,21 @@
       <!--Sorting date dropdown-->
       <div class="w3-half" style="margin-block-start: 1.75%;">
 
-        <label class="w3-text" style="margin-left:40%;font-size:medium;"><b>Sort by:</b></label>
+        <label class="w3-text" style="font-size:medium;"><b>Sort by:</b></label>
         
-        <select class="w3-select w3-border-black w3-dark-grey" name="option" style="width:25%;margin-left:1.5%;">
-          <option value="1">New</option>
-          <option value="2">Old</option>
+        <select class="w3-select w3-border-black w3-dark-grey" name="date_sort" style="width:25%;margin-left:0.5%;">
+          <option value="NEW">New</option>
+          <option value="OLD">Old</option>
         </select>
-     
-      </div>
+      
+        <input class="w3-button w3-dark-grey w3-right" type="submit" style="margin-right:5%;margin-block-end:0.2%;" value="GO!">
 
-    </div>
+      </div>
+      
+     
+
+    </form>
+
     <!--Container for sorting-filter dropdowns ENDS-->
 
     <table class="fixed_header w3-border w3-striped" style="width:100%;height:95%;">
@@ -119,11 +120,9 @@
           <th>Transaction ID</th>
           <th>Purchase/Sale ID</th>
           <th>Product ID</th>
-          <th>Product Name</th>
           <th class="w3-right-align">Quantity Purchased/Sold</th>
           <!--Aligns header cell ONLY ... does not affect cells in table column-->
           <th class="w3-right-align">Transaction Price</th>
-          <th class="w3-right-align">Transaction Value</th>
         </tr>
       </thead>
       <!--Table header ENDS-->
@@ -137,10 +136,9 @@
           <td>123</td>
           <td>1445228</td>
           <td>1001</td>
-          <td>Dummy Item One</td>
           <td class="w3-right-align">3</td>
           <td class="w3-right-align">$5.87</td>
-          <td class="w3-right-align">$17.61</td>
+        
         </tr>
         <!--End of properties for ONE row-->
 
@@ -149,10 +147,9 @@
           <td>487</td>
           <td>2875298</td>
           <td>1002</td>
-          <td>Dummy Item Tw0</td>
           <td class="w3-right-align">1</td>
           <td class="w3-right-align">$100.02</td>
-          <td class="w3-right-align">$100.02</td>
+          
         </tr>
 
         <tr class="w3-hover-pale-red">
@@ -160,10 +157,9 @@
           <td>987</td>
           <td>1325861</td>
           <td>1003</td>
-          <td>Dummy Item Three</td>
           <td class="w3-right-align">8</td>
           <td class="w3-right-align">$3.80</td>
-          <td class="w3-right-align">$30.40</td>
+          
         </tr>
       </tbody>
     </table>
