@@ -148,7 +148,7 @@ $result = $conn->query($purchaseQuery);
 if(!empty($result) && $result->num_rows > 0) {
 	//iteratively display rows of table by echoing <td> statements followed by indexes to $row['value']
 	while ($row = $result->fetch_assoc()) {
-		echo '<tr>';
+		echo '<tr class="w3-hover-pale-red">';
 		echo '<td>';
 		echo $row['transaction_datetime'];
 		echo '</td>';
@@ -161,10 +161,10 @@ if(!empty($result) && $result->num_rows > 0) {
 		echo '<td>';
 		echo $row['product_id'];
 		echo '</td>';
-		echo '<td>';
+		echo '<td class="w3-right-align">';
 		echo $row['quantity_purchased'];
 		echo '</td>';
-		echo '<td>';
+		echo '<td class="w3-right-align">';
 		echo $row['cost']*-1;
 		echo '</td>';
 		echo '</tr>';
